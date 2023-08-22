@@ -5,8 +5,9 @@ import function3 as f3
 import function4 as f4
 import Input1 as in1
 import grade as gd
+import CPerson as cPs
 
-x = 6
+x = 7
 if(x == 1):
     f1.setValue(3)
     rst = f1.swap(3,4)
@@ -32,7 +33,19 @@ elif(x == 6):
         print (value)
         value-=1
 
-#elif(x == 7):
+elif(x == 7):
+    p1 = cPs.Person()
+    p1.name = "전우치"
+    p1.print()
+    
+    # Run중에 변수를 추가 할 수 있음!! 
+    # 그냥 변수 선언하듯이..
+    p1.title= "Title_1"
+    print(p1.title)
+
+    p2 = cPs.Person()
+    p2.print()
+
 else:
     print(f3.union("HAM","EGG"))
 
