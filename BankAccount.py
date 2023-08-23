@@ -19,6 +19,7 @@ class BankAccount2:
         self.__id = id
         self.__name = name 
         self.__balance = balance 
+        self.balance2 = balance 
     def deposit(self, amount):
         self.__balance += amount 
     def withdraw(self, amount):
@@ -39,16 +40,20 @@ account2 = BankAccount2(100, "전우치", 15000)
 account2.deposit(5000)
 account2.withdraw(3000)
 
-# 작성은 되지만 없는거라서 새로 생성됨.
-account2.balance = 15000000 
+x = 3
 
-# 값이 기입되는데??
-account2.__balance = 15000000 
-print(account2.__balance)
+if x==1: #직접 출력 불가!!!
+    print(account2.__balance)
 
-# 기입되지 않은 걸로 출력됨!!!
-print(account2)
-
+elif x==2: #기존에 등록 되어 있는 것인데, 새로 생성되면서 값이 
+    account2.__balance = 88888888 #기존 것이 아님. 새로 생성함.
+    print(account2.__balance)
+    
+    #기존값으로 출력됨
+    print(account2)
+else:
+    # 기입되지 않은 걸로 출력됨!!!
+    print(account2)
 
 #이름 변경 (_BankAccount__Balnce)
 #백도어(테스트하는 용도)
