@@ -10,6 +10,7 @@ else:
 
 #구문 실행은 커서 객체에서
 cur = con.cursor()
+
 #테이블 구조 생성(ANSI SQL 92, 99에서 표준)
 cur.execute("create table if not exists PhoneBook " +
             " ( id integer primary key autoincrement, name text, phoneNum text);")
